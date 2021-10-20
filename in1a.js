@@ -26,11 +26,22 @@ function buttonAction3() {
 // Uppgift 1a4 här:
 function buttonAction4() {
   //Kode här!
+  var now =  new Date();
+  var since_2009 = now.getMilliseconds();
+  
+  alert(since_2009);
+  
 } // Slut!
+
 
 // Uppgift 1a5 här:
 function buttonAction5() {
   //Kode här!
+
+  let num1 = document.getElementById("number1").value;
+  let num2 = document.getElementById("number2").value;
+ 
+
 } // Slut!
 
 // Uppgift 1a6 här:
@@ -41,6 +52,17 @@ function buttonAction6() {
 // Uppgift 1a7 här:
 function buttonAction7() {
   //Kode här!
+  var massage = window.prompt("Skriv ett meddelande: ");
+  var dMasa = "";
+  
+  for ( i = 0; i < 10; i++) {
+   
+    dMasa += massage + " \n ";
+    
+  };
+
+  alert(dMasa);
+
 } // Slut! :)
 
 // Uppgift 1a8 här:
