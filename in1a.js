@@ -11,6 +11,7 @@ function buttonAction1() {
 // Uppgift 1a2 här:
 function buttonAction2() {
   //Kode här
+  let name;
   name= prompt(" What's your name? " );
   let nameUppCase= name.toUpperCase();
   alert(nameUppCase + ' ' +" Nice ");
@@ -20,16 +21,18 @@ function buttonAction2() {
 // Uppgift 1a3 här:
 function buttonAction3() {
   //Kode här!
+  let name;
   document.getElementById("result3").innerHTML =name;
 } // Slut!
 
 // Uppgift 1a4 här:
 function buttonAction4() {
   //Kode här!
-  var now =  new Date();
-  var since_2009 = now.getMilliseconds();
-  
-  alert(since_2009);
+  const since_2009 =  new Date('January 01, 2009 11:25:00')
+  const now = new Date();
+  const diff = now - since_2009;
+  const diffInSeconds = diff / 1000;
+alert(` Den är tidskillnaden: ${diffInSeconds}`);
   
 } // Slut!
 
@@ -38,10 +41,10 @@ function buttonAction4() {
 function buttonAction5() {
   //Kode här!
 
-  const number1 = document.getElementById("number1").value;
-  const number2 = document.getElementById("number2").value;
-  if(number1 >= 0 && number2 >= 0 && number1 <= 1000 && number2 <= 1000){
-    document.getElementById("result5").innerHTML = number1 * number2;
+  const num1 = document.getElementById("number1").value;
+  const num2 = document.getElementById("number2").value;
+  if(num1 >= 0 && num2 >= 0 && num1 <= 1000 && num2 <= 1000){
+    document.getElementById("result5").innerHTML = num1 * num2;
   } else{
     alert("Fel! siffror mellan 0 & 1000")
  
