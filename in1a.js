@@ -38,10 +38,10 @@ function buttonAction4() {
 function buttonAction5() {
   //Kode här!
 
-   number1 = document.getElementById("number1").value;
-   number2 = document.getElementById("number2").value;
+  const number1 = document.getElementById("number1").value;
+  const number2 = document.getElementById("number2").value;
   if(number1 >= 0 && number2 >= 0 && number1 <= 1000 && number2 <= 1000){
-    document.getElementById("result5").innerHTML = number1 + number2;
+    document.getElementById("result5").innerHTML = number1 * number2;
   } else{
     alert("Fel! siffror mellan 0 & 1000")
  
@@ -90,6 +90,14 @@ function buttonAction7() {
 // Uppgift 1a8 här:
 function buttonAction8() {
   //Kode här!
+  let hiddeBu = document.getElementById("hiddenButton").style;
+  if(hiddeBu.visibility == "visible"){
+    hiddeBu.visibility = "hidden";
+  } else{
+    hiddeBu.visibility = "visible"; 
+  }
+
+
 } //Slut!
 
 // Sista proceduren: Placera data i en tabell som byggs upp
