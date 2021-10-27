@@ -1,9 +1,9 @@
-var name;
+let name;
 // Uppgift 1a1:
 function buttonAction1() {
   //Kod här!
-  var date= new Date()
-  alert("Hello! " + 'Time and date:' + ' ' + date)
+  let date= new Date();
+  alert(" Hello! " + 'Time and date: ' + ' ' + date);
   
 
 } // Slut!
@@ -11,9 +11,9 @@ function buttonAction1() {
 // Uppgift 1a2 här:
 function buttonAction2() {
   //Kode här
-  name= prompt("What's your name? " );
-  var nameUpp= name.toUpperCase();
-  alert(nameUpp +' ' +"WOW");
+  name= prompt(" What's your name? " );
+  let nameUppCase= name.toUpperCase();
+  alert(nameUppCase + ' ' +" Nice ");
 
 } // Slut!
 
@@ -38,12 +38,12 @@ function buttonAction4() {
 function buttonAction5() {
   //Kode här!
 
-  let num1 = document.getElementById("number1").value;
-  let num2 = document.getElementById("number2").value;
-  if(num1 >= 0 && num2 >= 0 && num1 <= 1000 && num2 <= 1000){
-    document.getElementById("result5").innerHTML = (parseFloat(num1) + parseFloat(num2));
+   number1 = document.getElementById("number1").value;
+   number2 = document.getElementById("number2").value;
+  if(number1 >= 0 && number2 >= 0 && number1 <= 1000 && number2 <= 1000){
+    document.getElementById("result5").innerHTML = number1 + number2;
   } else{
-    alert("Fel! siffror mellan 0 & 1000");
+    alert("Fel! siffror mellan 0 & 1000")
  
 
   };
@@ -54,21 +54,36 @@ function buttonAction5() {
 // Uppgift 1a6 här:
 function buttonAction6() {
   //Kode här!
+  var text = document.getElementById("textInput").value;
+  var numWords = 0;
+
+  for (var i=0; i < text.length; i++) {
+    var currentCharacter = text[i];
+    if (currentCharacter == " "){
+      numWords += 1;
+
+    }
+  }
+  numWords += 1;
+  
+  document.getElementById("wordCount").innerHTML = numWords;
+  
+
 } // Slut.
 
 // Uppgift 1a7 här:
 function buttonAction7() {
   //Kode här!
-  var massage = window.prompt("Skriv ett meddelande: ");
-  var dMasa = "";
+  let massage = window.prompt("Skriv ett meddelande: ");
+  let someMsg = "";
   
   for ( i = 0; i < 10; i++) {
    
-    dMasa += massage + " \n ";
+    someMsg += massage + " \n\n ";
     
   };
 
-  alert(dMasa);
+  alert(someMsg);
 
 } // Slut! :)
 
