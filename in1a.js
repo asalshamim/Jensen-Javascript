@@ -46,7 +46,7 @@ function buttonAction5() {
     document.getElementById("result5").innerHTML = num1 * num2;
   } else{
     
-    alert("Fel! siffror mellan 0 & 1000")
+    alert("Fel!")
  
 
   };
@@ -114,7 +114,7 @@ function buttonAction9() {
   devidArr = devidArr.filter((b) => b); 
   
 
-  for (let i = 0; i < 7; i++) {  // Check how many rows are needed "7"
+  for (let i = 0; i <= 7; i++) {  // Check how many rows are needed "7"
     
     row = table.insertRow();
     
@@ -127,8 +127,7 @@ function buttonAction9() {
          cell = row.insertCell(); // Create cell
          cell.style.border='2px solid pink';
          
-         
-      cell.appendChild(document.createTextNode(devidArr[0])); 
+         cell.appendChild(document.createTextNode(devidArr[0])); 
         devidArr.splice(0,1); 
         
       } else { 
