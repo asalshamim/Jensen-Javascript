@@ -11,18 +11,17 @@ function buttonAction1() {
 // Uppgift 1a2 här:
 function buttonAction2() {
   //Kode här
-  let name;
-  name= prompt(" What's your name? " );
-  let nameUppCase= name.toUpperCase();
-  alert(nameUppCase + ' ' +" Nice ");
+  name= prompt(" What's your name? ");
+  let nameUpperCase= name.toUpperCase();
+  alert(nameUpperCase + ' ' +" Nice ");
 
 } // Slut!
 
 // Uppgift 1a3 här:
 function buttonAction3() {
   //Kode här!
-  let name;
-  document.getElementById("result3").innerHTML =name;
+  
+ document.getElementById("result3").innerHTML =name;
 } // Slut!
 
 // Uppgift 1a4 här:
@@ -46,6 +45,7 @@ function buttonAction5() {
   if(num1 >= 0 && num2 >= 0 && num1 <= 1000 && num2 <= 1000){
     document.getElementById("result5").innerHTML = num1 * num2;
   } else{
+    
     alert("Fel! siffror mellan 0 & 1000")
  
 
@@ -77,12 +77,12 @@ function buttonAction6() {
 // Uppgift 1a7 här:
 function buttonAction7() {
   //Kode här!
-  let massage = window.prompt("Skriv ett meddelande: ");
+  let massage = prompt("Skriv ett meddelande: ");
   let someMsg = "";
   
   for ( i = 0; i < 10; i++) {
    
-    someMsg += massage + " \n\n ";
+    someMsg += massage + " \n ";
     
   };
 
@@ -93,11 +93,11 @@ function buttonAction7() {
 // Uppgift 1a8 här:
 function buttonAction8() {
   //Kode här!
-  let hiddeBu = document.getElementById("hiddenButton").style;
-  if(hiddeBu.visibility == "visible"){
-    hiddeBu.visibility = "hidden";
+  let button = document.getElementById("hiddenButton").style;
+  if(button.visibility == "visible"){
+    button.visibility = "hidden";
   } else{
-    hiddeBu.visibility = "visible"; 
+    button.visibility = "visible"; 
   }
 
 
@@ -106,7 +106,47 @@ function buttonAction8() {
 // Sista proceduren: Placera data i en tabell som byggs upp
 function buttonAction9() {
   //Kode här
-} //Slut! Nu kan ni kolla över eran kod och lämna in. Gott jobbat!
+  let input = document.getElementById("arrayInput").value; 
+  let devidArr = input.split(","); // devide all inputs at ","
+
+  let result = document.getElementById("tableContainer"); 
+  let table = document.createElement("table");
+  devidArr = devidArr.filter((b) => b); 
+  
+
+  for (let i = 0; i < 7; i++) {  // Check how many rows are needed "7"
+    
+    row = table.insertRow();
+    
+    table.style.border ='4px solid pink';
+    
+    for (let e = 0; e < 7; e++){
+    
+      if(devidArr[0] != null) { 
+        
+         cell = row.insertCell(); // Create cell
+         cell.style.border='2px solid pink';
+         
+         
+      cell.appendChild(document.createTextNode(devidArr[0])); 
+        devidArr.splice(0,1); 
+        
+      } else { 
+        
+        result.appendChild(table); 
+        break;
+      
+      };
+      
+    };
+  };
+};
+
+  
+
+
+
+//Slut! Nu kan ni kolla över eran kod och lämna in. Gott jobbat!
 
 /*
  * Detta är en färdig procedur (funktion) som kopplar ihop händelsehanteraren
