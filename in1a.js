@@ -32,9 +32,10 @@ function buttonAction4() {
     const end = new Date();
     const result = end - start;
     alert( result /1000 + "sekunder");
+    document.getElementsByName("button4")[0].onclick= buttonAction4;
   }
-  document.getElementById("button4")[0].onclick= buttonAction4;
-  document.getElementById("button4")[0].onclick=time;
+  
+  document.getElementsByName("button4")[0].onclick= time;
 
   
 } // Slut!
