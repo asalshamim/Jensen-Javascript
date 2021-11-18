@@ -27,11 +27,15 @@ function buttonAction3() {
 // Uppgift 1a4 här:
 function buttonAction4() {
   //Kode här!
-  const since_2009 =  new Date('January 01, 2009 11:25:00')
-  const now = new Date();
-  const diff = now - since_2009;
-  const diffInSeconds = diff / 1000;
-alert(` Den är tidskillnaden: ${diffInSeconds}`);
+  const start =  new Date();
+  const time = function(){
+    const end = new Date();
+    const result = end - start;
+    alert( result /1000 + "sekunder");
+  }
+  document.getElementById("button4")[0].onclick= buttonAction4;
+  document.getElementById("button4")[0].onclick=time;
+
   
 } // Slut!
 
